@@ -1,5 +1,6 @@
 <?php
-	header("Cache-control: private");
+	header('Cache-Control: no-cache');
+	header('Pragma: no-cache');
 	header("Content-Type: text/javascript; charset=utf-8");
 		
 	$geoip_array = geoip_record_by_name($_SERVER['REMOTE_ADDR']);
