@@ -1,7 +1,8 @@
 <?php
-	header("Cache-control: private");
+	header('Cache-Control: no-cache'); // Not a permanent redirect.
+	header('Pragma: no-cache');
 	header("Content-Type: text/javascript; charset=utf-8");
-		
+
 	$geoip_array = geoip_record_by_name($_SERVER['REMOTE_ADDR']);
 
 	echo "function geoip_country_code(){ return '$geoip_array[country_code]'; }
