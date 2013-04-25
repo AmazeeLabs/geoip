@@ -1,5 +1,5 @@
 <?php
-	header('Cache-Control: no-cache'); // Not a permanent redirect.
+	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	header("Content-Type: text/javascript; charset=utf-8");
 
