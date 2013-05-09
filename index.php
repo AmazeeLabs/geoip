@@ -4,6 +4,7 @@
 	header("Content-Type: text/javascript; charset=utf-8");
 		
 	$geoip_array = geoip_record_by_name($_SERVER['HTTP_X_FORWARDED_FOR']);
+//	$geoip_array = geoip_record_by_name($_SERVER['REMOTE_ADDR']);
 
 	echo "function geoip_country_code(){ return '$geoip_array[country_code]'; }
 	function geoip_country_name(){ return '$geoip_array[country_name]'; }
