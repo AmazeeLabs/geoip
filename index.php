@@ -2,7 +2,9 @@
 	header('Cache-Control: no-cache');
 	header('Pragma: no-cache');
 	header("Content-Type: text/javascript; charset=utf-8");
-		
+	header("Vary: Cookie, Accept-Encoding");
+	header("Expires: Sun, 11 Mar 1984 12:00:00 GMT");
+
 	$geoip_array = geoip_record_by_name($_SERVER['HTTP_X_FORWARDED_FOR']);
 //	$geoip_array = geoip_record_by_name($_SERVER['REMOTE_ADDR']);
 
