@@ -6,8 +6,8 @@ header("Vary: Cookie, Accept-Encoding");
 header("Expires: Sun, 11 Mar 1984 12:00:00 GMT");
 
 
-if (!empty($_SERVER["HTTP_X_FORWARDED_FOR"]))
-	$ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+if (!empty($_SERVER["HTTP_TRUE_CLIENT_IP"]))
+	$ip = $_SERVER["HTTP_TRUE_CLIENT_IP"];
 else
 	$ip = $_SERVER["REMOTE_ADDR"];
 
